@@ -52,6 +52,16 @@
 	border: none;
 }
 
+.navbar .icon {
+	display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+	nav ul li a:not(:first-child) {display: none;}
+	nav ul li a.icon {
+	  float: right;
+	  display: block;
+	}
 
 nav {
 	flex-basis: 100%;
@@ -59,15 +69,20 @@ nav {
 	margin-right: 10px;
 	top: 0;
 	height: 50px;
+	
 
 	ul {
 		display: flex;
 		justify-content: flex-end;
 		margin-top: 45px;
 		margin-right: 50px;
+		
 
 		li {
 			font-size: 13px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			border-radius: 15px;
+			box-sizing: border-box;
 
 			a {
 				display: inline-block;
@@ -124,7 +139,7 @@ nav a:hover, a:focus {
 	margin-top: 40px;
 }
 
-.header_btn{
+.header_btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -132,12 +147,19 @@ nav a:hover, a:focus {
 	width: 36px;
 	border-radius: 50%;
 	background-color: #19bd9a; 
-	margin-top: 200px;
+	margin-top: 150px;
 	margin-left: auto;
 	margin-right: auto;
-
+	cursor: pointer;
 }
 
 .wrapper .header_btn .fa-heart-o {
 	font-size: 24px;
 }
+
+.fa-angle-down {
+	font-size: 16px;
+	color: #fff;
+}
+
+
