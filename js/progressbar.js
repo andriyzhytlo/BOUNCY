@@ -2005,7 +2005,7 @@ var Shape = function Shape(container, opts) {
                 color: null,
                 position: 'absolute',
                 left: '50%',
-                top: '50%',
+                top: '85%',
                 padding: 0,
                 margin: 0,
                 transform: {

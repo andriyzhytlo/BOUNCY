@@ -141,9 +141,17 @@
 							quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
 						</p>
 					</div>
-				</div>
-				<div class="services_progress">
-					
+					<div class="services_progress">
+						<div id="ProgressBar_Circle_1">
+							<p>Branding</p>
+						</div>
+						<div id="ProgressBar_Circle_2">
+							<p>Web Design</p>
+						</div>
+						<div id="ProgressBar_Circle_3">
+							<p>UI/UX</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="cta_block">
@@ -614,7 +622,7 @@
 			$(this).addClass('active');
 		});
 
-		//ProgressBar_line_1
+	//ProgressBar_line_1
 
 		var bar = new ProgressBar.Line(ProgressBar_line_1, {
 			strokeWidth: 1,
@@ -647,7 +655,7 @@
 
 			bar.animate(0.8);  // Number from 0.0 to 1.0
 		
-		//ProgressBar_line_2
+	//ProgressBar_line_2
 
 		var bar = new ProgressBar.Line(ProgressBar_line_2, {
 			strokeWidth: 1,
@@ -680,7 +688,7 @@
 
 			bar.animate(0.65);  // Number from 0.0 to 1.0
 
-		//ProgressBar_line_3
+	//ProgressBar_line_3
 
 		var bar = new ProgressBar.Line(ProgressBar_line_3, {
 			strokeWidth: 1,
@@ -712,6 +720,108 @@
 			});
 
 			bar.animate(0.75);  // Number from 0.0 to 1.0
+
+	//ProgressBar_Circle_1
+			
+		var bar = new ProgressBar.Circle(ProgressBar_Circle_1, {
+			color: '#aaa',
+			// This has to be the same size as the maximum width to
+			// prevent clipping
+			strokeWidth: 4,
+			trailWidth: 4,
+			easing: 'easeInOut',
+			duration: 1400,
+			text: {
+				autoStyleContainer: false
+			},
+			from: { color: '#aaa', width: 1 },
+			to: { color: '#19bd9a', width: 4 },
+			// Set default step function for all animate calls
+			step: function(state, circle) {
+				circle.path.setAttribute('stroke', state.color);
+				circle.path.setAttribute('stroke-width', state.width);
+
+				var value = (Math.round(circle.value() * 100) + ' %');
+				if (value === 0) {
+				circle.setText('');
+				} else {
+				circle.setText(value);
+				}
+
+			}
+			});
+			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+			bar.text.style.fontSize = '1.5rem';
+
+			bar.animate(0.8);  // Number from 0.0 to 1.0
+			
+	//ProgressBar_Circle_2
+			
+		var bar = new ProgressBar.Circle(ProgressBar_Circle_2, {
+			color: '#aaa',
+			// This has to be the same size as the maximum width to
+			// prevent clipping
+			strokeWidth: 4,
+			trailWidth: 4,
+			easing: 'easeInOut',
+			duration: 1400,
+			text: {
+				autoStyleContainer: false
+			},
+			from: { color: '#aaa', width: 1 },
+			to: { color: '#19bd9a', width: 4 },
+			// Set default step function for all animate calls
+			step: function(state, circle) {
+				circle.path.setAttribute('stroke', state.color);
+				circle.path.setAttribute('stroke-width', state.width);
+
+				var value =(Math.round(circle.value() * 100) + ' %');
+				if (value === 0) {
+				circle.setText('');
+				} else {
+				circle.setText(value);
+				}
+
+			}
+			});
+			bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+			bar.text.style.fontSize = '1.5rem';
+
+			bar.animate(0.75);  // Number from 0.0 to 1.0
+
+	//ProgressBar_Circle_3
+			
+		var bar = new ProgressBar.Circle(ProgressBar_Circle_3, {
+				color: '#aaa',
+				// This has to be the same size as the maximum width to
+				// prevent clipping
+				strokeWidth: 4,
+				trailWidth: 4,
+				easing: 'easeInOut',
+				duration: 1400,
+				text: {
+					autoStyleContainer: false
+				},
+				from: { color: '#aaa', width: 1 },
+				to: { color: '#19bd9a', width: 4 },
+				// Set default step function for all animate calls
+				step: function(state, circle) {
+					circle.path.setAttribute('stroke', state.color);
+					circle.path.setAttribute('stroke-width', state.width);
+
+					var value = (Math.round(circle.value() * 100) + ' %');
+					if (value === 0) {
+					circle.setText('');
+					} else {
+					circle.setText(value);
+					}
+
+				}
+				});
+				bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+				bar.text.style.fontSize = '1.5rem';
+
+				bar.animate(0.6);  // Number from 0.0 to 1.0
 
 	</script>
 </body>
